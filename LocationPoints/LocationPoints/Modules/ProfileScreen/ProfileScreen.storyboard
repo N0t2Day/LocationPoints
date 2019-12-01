@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5S-cz-Yjs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="2L3-58-ohZ">
+            <objects>
+                <viewController storyboardIdentifier="ProfileScreenView" title="Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a5S-cz-Yjs" customClass="ProfileScreenView" customModule="LocationPoints" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cb5-OS-1Dg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-vS-RRC">
+                                <rect key="frame" x="157.5" y="398.5" width="99" height="99"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="esc" translatesAutoresizingMaskIntoConstraints="NO" id="V29-k0-xh0">
+                                        <rect key="frame" x="10" y="10" width="79" height="79"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDB-uo-Lqt">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
+                                        <connections>
+                                            <action selector="signOut:" destination="a5S-cz-Yjs" eventType="touchUpInside" id="dUf-50-hjT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xDB-uo-Lqt" firstAttribute="top" secondItem="HVe-vS-RRC" secondAttribute="top" id="0H8-vh-blg"/>
+                                    <constraint firstItem="V29-k0-xh0" firstAttribute="centerY" secondItem="HVe-vS-RRC" secondAttribute="centerY" id="4ZX-j0-7p2"/>
+                                    <constraint firstItem="xDB-uo-Lqt" firstAttribute="leading" secondItem="HVe-vS-RRC" secondAttribute="leading" id="6kH-hL-jUv"/>
+                                    <constraint firstAttribute="trailing" secondItem="xDB-uo-Lqt" secondAttribute="trailing" id="Jne-nD-q6q"/>
+                                    <constraint firstItem="V29-k0-xh0" firstAttribute="height" secondItem="HVe-vS-RRC" secondAttribute="height" multiplier="0.8" id="QER-7B-xoI"/>
+                                    <constraint firstAttribute="bottom" secondItem="xDB-uo-Lqt" secondAttribute="bottom" id="ZtX-so-XqV"/>
+                                    <constraint firstAttribute="width" secondItem="HVe-vS-RRC" secondAttribute="height" multiplier="1:1" id="cPe-wD-cWd"/>
+                                    <constraint firstItem="V29-k0-xh0" firstAttribute="width" secondItem="HVe-vS-RRC" secondAttribute="width" multiplier="0.8" id="dDd-wt-q1Z"/>
+                                    <constraint firstItem="V29-k0-xh0" firstAttribute="centerX" secondItem="HVe-vS-RRC" secondAttribute="centerX" id="vTu-mm-Iin"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18849188089999999" green="0.1919066012" blue="0.20392289760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="HVe-vS-RRC" firstAttribute="centerY" secondItem="cb5-OS-1Dg" secondAttribute="centerY" id="7b7-Qt-lz9"/>
+                            <constraint firstItem="HVe-vS-RRC" firstAttribute="width" secondItem="cb5-OS-1Dg" secondAttribute="width" multiplier="0.24" id="URB-fL-lnV"/>
+                            <constraint firstItem="HVe-vS-RRC" firstAttribute="centerX" secondItem="cb5-OS-1Dg" secondAttribute="centerX" id="hIw-3T-Ov6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uFB-tI-8gp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" landscapeImage="profile" id="BwP-Re-1HN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVU-ao-lRF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="esc" width="80" height="80"/>
+        <image name="profile" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ita-0e-PNE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View-->
+        <scene sceneID="QB5-OD-xcb">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreenView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iDR-LU-vif" customClass="SplashScreenView" customModule="LocationPoints" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AOk-3M-pzD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CK-E2-hpP">
+                                <rect key="frame" x="157.5" y="398.5" width="99" height="99"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_google" translatesAutoresizingMaskIntoConstraints="NO" id="P7o-w5-oAK">
+                                        <rect key="frame" x="10" y="10" width="79" height="79"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwS-Gs-WPS">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
+                                        <connections>
+                                            <action selector="signIn:" destination="iDR-LU-vif" eventType="touchUpInside" id="iv2-Bn-9dU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="P7o-w5-oAK" firstAttribute="height" secondItem="2CK-E2-hpP" secondAttribute="height" multiplier="0.8" id="AXb-Dr-63D"/>
+                                    <constraint firstAttribute="width" secondItem="2CK-E2-hpP" secondAttribute="height" multiplier="1:1" id="Fay-7Y-pMx"/>
+                                    <constraint firstAttribute="bottom" secondItem="MwS-Gs-WPS" secondAttribute="bottom" id="Im1-aH-1zT"/>
+                                    <constraint firstItem="MwS-Gs-WPS" firstAttribute="top" secondItem="2CK-E2-hpP" secondAttribute="top" id="LaF-Mx-98h"/>
+                                    <constraint firstItem="MwS-Gs-WPS" firstAttribute="leading" secondItem="2CK-E2-hpP" secondAttribute="leading" id="Lay-S3-qDn"/>
+                                    <constraint firstItem="P7o-w5-oAK" firstAttribute="width" secondItem="2CK-E2-hpP" secondAttribute="width" multiplier="0.8" id="Pqb-p6-9fA"/>
+                                    <constraint firstItem="P7o-w5-oAK" firstAttribute="centerX" secondItem="2CK-E2-hpP" secondAttribute="centerX" id="b2N-hS-MYO"/>
+                                    <constraint firstItem="P7o-w5-oAK" firstAttribute="centerY" secondItem="2CK-E2-hpP" secondAttribute="centerY" id="k5M-ZN-9AV"/>
+                                    <constraint firstAttribute="trailing" secondItem="MwS-Gs-WPS" secondAttribute="trailing" id="pcl-z9-VkA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18849188089999999" green="0.1919066012" blue="0.20392289760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2CK-E2-hpP" firstAttribute="width" secondItem="AOk-3M-pzD" secondAttribute="width" multiplier="0.24" id="GS1-Dp-UDC"/>
+                            <constraint firstItem="2CK-E2-hpP" firstAttribute="centerY" secondItem="AOk-3M-pzD" secondAttribute="centerY" id="cHl-Rw-Vmb"/>
+                            <constraint firstItem="2CK-E2-hpP" firstAttribute="centerX" secondItem="AOk-3M-pzD" secondAttribute="centerX" id="zim-0h-18C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pHx-V9-g1z"/>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="Dwh-DO-X9q"/>
+                    <connections>
+                        <outlet property="btnSignIn" destination="2CK-E2-hpP" id="GoA-iE-8Ug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGK-Gi-lYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.7391304347827" y="95.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8eP-fj-pTU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ita-0e-PNE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="6RM-Kt-Hdo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iDR-LU-vif" kind="relationship" relationship="rootViewController" id="1V5-eA-IvI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHK-13-eYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_google" width="512" height="512"/>
+    </resources>
+</document>
